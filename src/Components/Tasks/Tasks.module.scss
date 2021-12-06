@@ -1,0 +1,21 @@
+.tasks {
+  display: flex;
+  width: max-content;
+
+  span {
+    border-radius: 7px 7px 0 0;
+    font-size: 12px;
+    margin: 0 2px;
+    padding: 5px 10px;
+    line-height: 15px;
+    user-select: none;
+    cursor: pointer;
+    color: rgb(79, 141, 203);
+    transition: all 0.2s ease;
+    &.active,
+    &:hover {
+      background: rgb(79, 141, 203);
+      color: white;
+    }
+  }
+}
