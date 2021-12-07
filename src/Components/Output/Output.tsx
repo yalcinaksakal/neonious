@@ -10,8 +10,7 @@ const Output: React.FC<{ func: any; run: string }> = ({ func, run }) => {
       return;
     }
 
-    let func1 = new Function(`return ${func.func}`);
-    func1 = func1();
+    let func1 = new Function(`return ${func.func}`)();
     let result = "";
     try {
       result = JSON.stringify(
