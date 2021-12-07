@@ -2,4 +2,7 @@
   width: 60%;
   height: 70vh;
   margin-left: 5px;
+  @media (max-width: 600px) {
+    width: calc(100% - 10px);
+  }
 }

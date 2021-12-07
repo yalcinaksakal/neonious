@@ -1,12 +1,13 @@
 .tasks {
   display: flex;
   width: max-content;
+  margin-left: 4px;
 
   span {
     border-radius: 7px 7px 0 0;
     font-size: 12px;
-    margin: 0 2px;
-    padding: 5px 10px;
+    margin: 0 1px;
+    padding: 2px 5px;
     line-height: 15px;
     user-select: none;
     cursor: pointer;

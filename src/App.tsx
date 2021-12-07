@@ -9,7 +9,7 @@ const App = () => {
   const [activeTab, setActiveTab] = useState(0);
   return (
     <>
-      <p className={styles.heading}>YA's answers to Neonious interview tasks</p>
+      <p className={styles.heading}>YA - Neonious tasks</p>
       <Tasks setActiveTab={setActiveTab} tasks={tasks.map(t => t.name)} />
       <Task task={tasks[activeTab]} />
     </>

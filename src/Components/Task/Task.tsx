@@ -1,7 +1,8 @@
 import Ace from "../Ace/Ace";
 import Card from "../Card/Card";
 import Iframe from "../Iframe/Iframe";
-
+import Output from "../Output/Output";
+import styles from "./Task.module.scss";
 const Task: React.FC<{ task: any }> = ({ task }) => {
   let tsx;
   switch (task.type) {
@@ -33,7 +34,10 @@ const Task: React.FC<{ task: any }> = ({ task }) => {
       tsx = (
         <>
           <Card>{task.task}</Card>
-          <Ace data={"const " + task.code.name + " = " + task.code} />
+          <div className={styles.output}>
+            <Output func={task.code} run={task.run} />
+            <Ace data={"const " + task.code.name + " = " + task.code} />
+          </div>
         </>
       );
       break;
