@@ -10,10 +10,12 @@ const Output: React.FC<{ func: any; run: string }> = ({ func, run }) => {
       return;
     }
 
+    let func1 = new Function(`return ${func.func}`);
+    func1 = func1();
     let result = "";
     try {
       result = JSON.stringify(
-        eval(inputRef.current.value.replace(func.name, "func"))
+        eval("func1" + inputRef.current.value.replace(func.name, ""))
       );
     } catch (e) {
       result =

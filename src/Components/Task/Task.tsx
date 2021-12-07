@@ -5,6 +5,7 @@ import Output from "../Output/Output";
 import styles from "./Task.module.scss";
 const Task: React.FC<{ task: any }> = ({ task }) => {
   let tsx;
+  // console.log(JSON.stringify(task.code + ""));
   switch (task.type) {
     case "iframe":
       tsx = <Iframe src={task.src} title={task.src} />;
@@ -36,7 +37,7 @@ const Task: React.FC<{ task: any }> = ({ task }) => {
           <Card>{task.task}</Card>
           <div className={styles.output}>
             <Output func={task.code} run={task.run} />
-            <Ace data={"const " + task.code.name + " = " + task.code} />
+            <Ace data={"const " + task.code.name + " = " + task.code.func} />
           </div>
         </>
       );
