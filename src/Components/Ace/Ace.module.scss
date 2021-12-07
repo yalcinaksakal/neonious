@@ -1,6 +1,7 @@
 .editor {
   width: 60%;
-  height: 70vh;
+  height: 80vh;
+  // flex: 1 1 auto;
   margin-left: 5px;
   @media (max-width: 600px) {
     width: calc(100% - 10px);

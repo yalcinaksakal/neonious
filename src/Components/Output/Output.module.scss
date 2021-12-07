@@ -29,9 +29,10 @@
     color: white;
     height: 25px;
     line-height: 25px;
-    background: rgb(59, 104, 149);
+    background: rgb(79, 141, 203);
+    transition: all 0.2s ease;
     &:hover {
-      background: rgb(79, 141, 203);
+      background: rgb(97, 173, 250);
     }
   }
   @media (max-width: 600px) {
