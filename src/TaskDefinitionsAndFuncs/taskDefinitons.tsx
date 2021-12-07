@@ -1,29 +1,35 @@
-import { twoSum } from "./funcs";
+import { biggestAscending, calculator } from "./funcs";
 
 const answers = [
-  "Eiusmod amet veniam officia elit irure ut incididunt Lorem ex consequat.Laborum tempor Lorem esse irure. Esse enim occaecat sint laborum     enimquis. Laboris occaecat culpa enim in voluptate occaecat officia ex.    Nulla sint nulla irure labore aute ad consequat. Sit esse eiusmod labore    laborum culpa nulla in non ad elit occaecat. Excepteur consectetur anim     tempor ullamco culpa. Proident proident quis elit enim tempor duis voluptate     tempor. Aute laborum commodo commodo ad est aliqua nulla officia eu.",
-  "Ipsum mollit officia pariatur eu et. Fugiat exercitation minim laboris     excepteur ad cillum dolor qui. Duis nostrud ipsum quis tempor culpa amet     veniam nostrud. Adipisicing ut adipisicing nulla enim voluptate esse ex    cillum ea Lorem irure ullamco qui. Enim est consequat labore est adipisicing    nostrud culpa et minim dolore ex quis. Ex amet laboris quis mollit non minim    excepteur adipisicing tempor fugiat consequat. Occaecat in aliquip cillum     eiusmod exercitation eu adipisicing laboris ad cillum et veniam proident     labore.",
+  "For a full stack app, I would prefer next.js, react, redux, typescript and firebase. With next.js I can handle both server side rendering and client side rendering, implement api endpoints and my pages will be rendered on ssr first so SEO agents my get the my pages content and list them. React is very dynamic. I think one of the frameworks vue, angular or react is a must in frontend. Redux is also mandatory to handle app wide states and avoiding prop chains. Firebase and firestore are easy to use, soct effective and scalabl.Since data is stored as JSON objects, nosql dbs are easy to use. I may prefer MONGODB too. I would develop the app with agile methodology. In first 3 week prototype should be ready. In 6 months full functional app should be in service.",
+  "One can develop same apps with both pythn and js. Python is more generally used in data science, statistics, artificial intelligence and backends. JS is being used in both sides (Node.js and React.js). Python is easier to implement. Becuase its syntax and code seems like plain english.",
 
-  "Dolor veniam nulla labore dolor fugiat ullamco non in aliquip anim et ut     aute reprehenderit. Elit occaecat dolore fugiat occaecat. Et exercitation ex    aute veniam consectetur pariatur exercitation in aliqua eiusmod id. Amet     consequat dolore do amet mollit exercitation. Exercitation ea enim Lorem     pariatur ut labore nostrud occaecat. Nostrud irure mollit minim ad    reprehenderit adipisicing esse incididunt voluptate. Ad deserunt aliquip     aute eiusmod incididunt enim amet et reprehen erit aliqua cupidatat tempo",
-  "Eiusmod amet veniam officia elit irure ut incididunt Lorem ex consequat.Laborum tempor Lorem esse irure. Esse enim occaecat sint laborum    enimquis. Laboris occaecat culpa enim in voluptate occaecat officia ex.",
+  "Both are object oriented programing languages. They have classes, inheritance polymorphism, data encapsulation etc. C++ and C are best suit for portable devices, low-level language, embedded programing. They give the user control over the memory. But control over the memory may become a difficult task, they don't have garbage memory collector, and in Web, they are hard to code. Python and JS are high-level programming languages. JS was built for the web, and number one most used language in the world.",
+  "Access management is the first think to handle. Complex pwd, pwd history, pwd age, assiging roles to profiles, and profiles to users are important. Secondly iptables are important for managing network. Than I will manage logs and take backups periodically. Capacity management, cpu utilisation, heat, humidity, physical securtiy are also important. ",
 ];
 
 const questions = [
-  "Aliquip sit cillum aute labore culpa. Commodo sint pariatur sint aute fugiat eu minim. Exercitation elit eu elit et nulla nisi commodo laboris     consectetur adipisicing.",
-  "Aliquip sit cillum aute labore culpa. Commodo sint pariatur sint aute fugiat     eu minim. Exercitation elit eu elit et nulla nisi commodo laboris     consectetur adipisicing.",
-  "    Aliquip sit cillum aute labore culpa. Commodo sint pariatur sint aute fugiat     eu minim. Exercitation elit eu elit et nulla nisi commodo laboris     consectetur adipisicing.",
-  "Aliquip sit cillum aute labore culpa. Commodo sint pariatur sint aute fugiat     eu minim. Exercitation elit eu elit et nulla nisi commodo laboris     consectetur adipisicing.",
+  "You have the task of building a software with a UI. What programming languages /tools /frameworks can you choose from and what approach do you prefer in which circumstance?",
+  "Please explain major differences between JavaScript and Python. How can you adapt one to have the features the other has?",
+  "Please explain major differences between JavaScript/Python and C/C++.",
+  "You ordered a Linux dedicated server in an online data center. How do you secure it? Please write the actions you will take.",
 ];
 
 const tasks = [
   {
     name: "Task 1",
-    task: "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.",
-    code: twoSum,
-    run: "twoSum([1,2,3,4,5,6,7,8],6)",
+    task: "Develop a term calculator that can handle (), *, /, +, and -. For example, if the user enters the term (5 + 8) * 3/8 +3, the term calculator shall calculate and output the result according to the school rules of term calculations. These rules are: () before * and /, * and / before + and -. Several * and / are calculated from left to right, several + and - also from left to right. Important: The actual algorithm must be implemented itself. The use of functions like eval in JavaScript are not permitted.",
+    code: calculator,
+    run: 'calculator("(-5+4*2+5-3) * 3/8 +3")',
     type: "code",
   },
-  { name: "Task 2", task: "", code: "", run: "", type: "code" },
+  {
+    name: "Task 2",
+    task: "Thomas likes numbers. As a meditation exercise, he likes to go through all numbers starting with 1 and going up, and then marking all numbers whose digits are sorted in ascending order. For example, 11235888 is such a number. After a while, he stops. Write an efficiently designed program which, after entering a number between 1 and 10^18, which represents the last number checked by Thomas, then outputs the last number marked by Thomas.\r\nExamples:Input: 23245 Output: 22999\r\nInput: 11235888 Output: 11235888\r\nInput: 111110 Output: 99999\r\nInput: 33245 Output: 29999\r\nTip: Going through the numbers one by one and testing them is not efficient enough.",
+    code: biggestAscending,
+    run: 'biggestAscending("23245")',
+    type: "code",
+  },
   {
     name: "Task 3",
     questions,

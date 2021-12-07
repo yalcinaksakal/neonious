@@ -9,7 +9,6 @@ const Output: React.FC<{ func: any; run: string }> = ({ func, run }) => {
       setOuput("Input is empty, please provide an input to execute.");
       return;
     }
-
     let func1 = new Function(`return ${func.func}`)();
     let result = "";
     try {
