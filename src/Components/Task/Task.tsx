@@ -36,7 +36,7 @@ const Task: React.FC<{ task: any }> = ({ task }) => {
         <>
           <Card>{task.task}</Card>
           <div className={styles.output}>
-            <Output func={task.code} run={task.run} />
+            <Output key={task.run} func={task.code} run={task.run} />
             <Ace data={"const " + task.code.name + " = " + task.code.func} />
           </div>
         </>

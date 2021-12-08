@@ -2,9 +2,9 @@ import { useRef, useState } from "react";
 import styles from "./Output.module.scss";
 
 const Output: React.FC<{ func: any; run: string }> = ({ func, run }) => {
-  console.log(run);
   const [output, setOuput] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
+
   const evaluate = () => {
     if (!inputRef.current?.value) {
       setOuput("Input is empty, please provide an input to execute.");
@@ -26,13 +26,7 @@ const Output: React.FC<{ func: any; run: string }> = ({ func, run }) => {
   };
   return (
     <div className={styles.Output}>
-      <input
-        key={run}
-        ref={inputRef}
-        autoFocus
-        type="search"
-        placeholder={run}
-      />
+      <input ref={inputRef} autoFocus type="search" placeholder={run} />
       <button onClick={evaluate}>Run</button>
       <div className={styles.result}>
         <p>Output</p>
