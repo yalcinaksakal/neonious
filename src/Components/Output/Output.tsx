@@ -13,15 +13,14 @@ const Output: React.FC<{ func: any; run: string }> = ({ func, run }) => {
     let func1 = new Function(`return ${func.func}`)();
     let result = "";
     try {
-      result = JSON.stringify(
-        eval("func1" + inputRef.current.value.replace(func.name, ""))
-      );
+      result = eval("func1" + inputRef.current.value.replace(func.name, ""));
     } catch (e) {
       result =
         e instanceof Error
           ? e.name + " : " + e.message
           : "sth went wrong, please check the input";
     }
+    console.log(result);
     setOuput(result);
   };
   return (

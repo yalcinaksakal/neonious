@@ -5,5 +5,5 @@ export const calculator = {
 
 export const biggestAscending = {
   name: "biggestAscending",
-  func: 'function (num) {\r\n  if (typeof num === "number") num += "";\r\n  const l = num.length;\r\n  const digits = num.split("");\r\n  let i = l - 1;\r\n  while (i > 0) {\r\n    if (digits[i] < digits[i - 1]) {\r\n      for (let k = i; k < l; k++) digits[k] = 9;\r\n      digits[i - 1]--;\r\n      continue;\r\n    }\r\n    i--;\r\n  }\r\n  while (!digits[0] && digits.length) digits.shift();\r\n  return digits.join("");\r\n}',
+  func: 'function (num) {\r\n  if (typeof num === "number") num += "";\r\n\r\n  const l = num.length;\r\n  const digits = num.split("");\r\n  let i = l - 1;\r\n\r\n  while (i > 0) {\r\n    if (digits[i] < digits[i - 1]) {\r\n      for (let k = i; k < l; k++) digits[k] = 9;\r\n      digits[i - 1]--;\r\n    }\r\n    i--;\r\n  }\r\n  while (!digits[0] && digits.length) digits.shift();\r\n  return digits.join("");\r\n}',
 };
